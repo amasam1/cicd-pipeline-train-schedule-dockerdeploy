@@ -14,7 +14,7 @@ pipeline {
             }
             steps {
                 script {
-                    app = docker.build("amasam/train-schedule")
+                    app = docker.build("amasam/train-schedule2")
                     app.inside {
                         sh 'echo $(curl localhost:8080)'
                     }
@@ -34,6 +34,5 @@ pipeline {
                 }
             }
         }
-      }
-    }
+    }   
 }
